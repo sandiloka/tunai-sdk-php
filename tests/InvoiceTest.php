@@ -25,9 +25,9 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
             );
         $item = array
             (
-                'id' => '1234567890',
+                'itemId' => '1234567890',
                 'price' => 2000,
-                'qty' => 1,
+                'quantity' => 1,
                 'description' => 'Sepatu Warna Merah Jambu'
 
             );
@@ -36,6 +36,7 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
         $currentInvoiceData = array
             (
                 'refId' => $currentInvoiceRefId,
+                'amount' => 2000,
                 'expired' => ((string) time() + 24 * 60 * 60) . '000',
                 'customer' => $customer,
                 'items' => $items
